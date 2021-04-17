@@ -13,6 +13,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
+import Dashboard from 'containers/Dashboard/Loadable';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -23,11 +24,9 @@ import GlobalStyle from '../../global-styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
   margin: 0 auto;
   display: flex;
   min-height: 100%;
-  padding: 0 16px;
   flex-direction: column;
 `;
 
@@ -42,8 +41,10 @@ export default function App() {
       </Helmet>
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        {/* <Route exact path="/" component={HomePage} /> */}
+        <Route exact path="/" component={Login} />
         <Route path="/features" component={FeaturePage} />
+        <Route path="/dashboard" component={Dashboard} />        
         <Route path="/login" component={Login} />
         <Route path="/register" component={Registration} />
         <Route path="" component={NotFoundPage} />

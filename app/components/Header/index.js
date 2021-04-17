@@ -14,7 +14,15 @@ function Header() {
       {/* <A href="https://www.reactboilerplate.com/">
         <Img src={Banner} alt="react-boilerplate - Logo" />
       </A> */}
-      Header
+      
+      <div style={{ background: '#2874f0', padding: '1%', color: '#FFF' }}>
+        <div>
+          <a href="/"><img width="75" src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/flipkart-plus_8d85f4.png" alt="Flipkart" title="Flipkart" class="_2xm1JU" /></a>
+          <span style={{ fontWeight: 'bold' }}> Span</span>
+        </div>
+        
+      </div>
+
       {/* <NavBar>
         <HeaderLink to="/">
           <FormattedMessage {...messages.home} />

@@ -8,22 +8,24 @@ import messages from './messages';
 
 function Footer() {
   return (
-    <Wrapper style={{ padding: '0px' }}>
+    <Wrapper style={{ padding: '1%', background: '#2874f0', color: '#FFF' }}>
+      <section>
+      <div>
+        <a style={{ color: '#FFF' }} id="divTOU" href="#">Terms of Use</a> | <a style={{ color: '#FFF' }} id="divPRV" href="#">Privacy Policy</a>
+      </div>
+      </section>
       {/* <section>
-        <FormattedMessage {...messages.licenseMessage} />
-      </section>
-      <section>
         <LocaleToggle />
-      </section>
+      </section> */}
       <section>
-        <FormattedMessage
+        {/* <FormattedMessage
           {...messages.authorMessage}
           values={{
             author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
           }}
-        />
-      </section> */}
-      Footer
+        /> */}
+        All Rights Reserved, @2021 <a style={{ color: '#FFF' }} href="#">Powered by Span</a>
+      </section>
     </Wrapper>
   );
 }
