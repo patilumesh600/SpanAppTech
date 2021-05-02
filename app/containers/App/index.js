@@ -41,7 +41,7 @@ export default function App() {
       </Helmet>
       <Header />
       <Switch>
-        {/* <Route exact path="/" component={HomePage} /> */}
+        <Route exact path="/home" component={HomePage} />
         <Route exact path="/" component={Login} />
         <Route path="/features" component={FeaturePage} />
         <Route path="/dashboard" component={Dashboard} />        

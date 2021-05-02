@@ -4,11 +4,11 @@
  *
  */
 
-import React, { memo } from 'react';
+import React, { useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
@@ -19,34 +19,19 @@ import reducer from './reducer';
 import saga from './saga';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import CarouselMulti from 'react-multi-carousel';
+// import CarouselMulti from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 // import messages from './messages';
 // https://www.npmjs.com/package/react-responsive-carousel
 
-export function Dashboard() {
+export function Dashboard(props,{ activeItemIndex = '0' }) {
   useInjectReducer({ key: 'dashboard', reducer });
   useInjectSaga({ key: 'dashboard', saga });
+  useEffect(() => {
+    // When initial state
+  }, []);
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
+  debugger;
 
   return (
     <div>
@@ -54,31 +39,62 @@ export function Dashboard() {
         <title>Dashboard</title>
         <meta name="description" content="Description of Dashboard" />
       </Helmet>
+      {activeItemIndex+''+props.dashboard.activeItemIndex1}
       {/* <FormattedMessage {...messages.header} /> */}
-      <div className="row" style={{ paddingBottom: '1%', borderBottom: '1px solid rgba(0, 0, 0, 0.1)' }}>
+      <div
+        className="row"
+        style={{
+          paddingBottom: '1%',
+          borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        }}
+      >
         {/* Dashboard */}
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="Top Offers" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="Top Offers"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          />
           <div>Top Offers</div>
         </div>
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="Books" src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="Books"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100"
+          />
           <div>Books</div>
         </div>
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="Nootebook" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="Nootebook"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          />
           <div>Nootebook</div>
         </div>
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="Nootebook" src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="Nootebook"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100"
+          />
           <div>Top Offers</div>
         </div>
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="Tools & Accessories" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="Tools & Accessories"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          />
           <div>Tools & Accessories</div>
         </div>
         <div className="col-2" style={{ textAlign: 'center' }}>
-          <img className="_396cs4 _3exPp9" alt="stationery" src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100" />
+          <img
+            className="_396cs4 _3exPp9"
+            alt="stationery"
+            src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100"
+          />
           <div>stationery</div>
         </div>
       </div>
@@ -101,25 +117,6 @@ export function Dashboard() {
           </div>
         </Carousel>
       </div>
-
-
-      <Carousel responsive={responsive}>
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-        <div>Item 4</div>
-      </Carousel>;
-
-
-
-
-
-
-
-
-
-
-
     </div>
   );
 }
