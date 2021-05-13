@@ -14,6 +14,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import Dashboard from 'containers/Dashboard/Loadable';
+import OrderSummary from 'containers/OrderSummary/Loadable';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -44,7 +45,8 @@ export default function App() {
         <Route exact path="/home" component={HomePage} />
         <Route exact path="/" component={Login} />
         <Route path="/features" component={FeaturePage} />
-        <Route path="/dashboard" component={Dashboard} />        
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/ordersummary" component={OrderSummary} />  
         <Route path="/login" component={Login} />
         <Route path="/register" component={Registration} />
         <Route path="" component={NotFoundPage} />

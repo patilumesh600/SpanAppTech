@@ -17,6 +17,7 @@ import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectDashboard from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import itemProducts from './partial/items';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 // import CarouselMulti from 'react-multi-carousel';
@@ -31,15 +32,13 @@ export function Dashboard(props,{ activeItemIndex = '0' }) {
     // When initial state
   }, []);
 
-  debugger;
-
   return (
     <div>
       <Helmet>
         <title>Dashboard</title>
         <meta name="description" content="Description of Dashboard" />
       </Helmet>
-      {activeItemIndex+''+props.dashboard.activeItemIndex1}
+      {/* {activeItemIndex+''+props.dashboard.activeItemIndex1} */}
       {/* <FormattedMessage {...messages.header} /> */}
       <div
         className="row"
@@ -117,6 +116,11 @@ export function Dashboard(props,{ activeItemIndex = '0' }) {
           </div>
         </Carousel>
       </div>
+
+      <div>
+        {itemProducts()}
+      </div>
+
     </div>
   );
 }
