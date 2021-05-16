@@ -24,7 +24,7 @@ function Footer() {
             author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
           }}
         /> */}
-        All Rights Reserved, @2021 <a style={{ color: '#FFF' }} href="#">Powered by Span</a>
+        All Rights Reserved @2021 <a style={{ color: '#FFF' }} href="#">Powered by Span</a>
       </section>
     </Wrapper>
   );
