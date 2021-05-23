@@ -32,6 +32,9 @@ const AppWrapper = styled.div`
 `;
 
 export default function App() {
+  const path = window.location.pathname; // lets imaging that url is "/home/x"
+  const pathArray = path.split('/');
+  const loc = pathArray[1].toLocaleLowerCase();
   return (
     <AppWrapper>
       <Helmet
@@ -40,18 +43,18 @@ export default function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Header />
+      {loc !== 'login' && loc !== 'register' && <Header />}
       <Switch>
         <Route exact path="/home" component={HomePage} />
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Dashboard} />
         <Route path="/features" component={FeaturePage} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/ordersummary" component={OrderSummary} />  
+        <Route path="/ordersummary" component={OrderSummary} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Registration} />
         <Route path="" component={NotFoundPage} />
       </Switch>
-      <Footer />
+      {loc !== 'login' && loc !== 'register' && <Footer />}
       <GlobalStyle />
     </AppWrapper>
   );

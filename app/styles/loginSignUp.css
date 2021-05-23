@@ -72,3 +72,7 @@
   .form{
     width: 60%;margin-left: 20%;border: 1px solid #d3d3d3;padding: 5%;background-color: #FFF;
   }
+
+  .form{
+    width: 40%;margin-left: 10%;border: 1px solid #d3d3d3;padding: 5%;background-color: #FFF;
+  }
