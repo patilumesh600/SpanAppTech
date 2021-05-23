@@ -25,7 +25,7 @@ import 'react-multi-carousel/lib/styles.css';
 // import messages from './messages';
 // https://www.npmjs.com/package/react-responsive-carousel
 
-export function Dashboard(props,{ activeItemIndex = '0' }) {
+export function Dashboard(props, { activeItemIndex = '0' }) {
   useInjectReducer({ key: 'dashboard', reducer });
   useInjectSaga({ key: 'dashboard', saga });
   useEffect(() => {
@@ -117,10 +117,7 @@ export function Dashboard(props,{ activeItemIndex = '0' }) {
         </Carousel>
       </div>
 
-      <div>
-        {itemProducts()}
-      </div>
-
+      <div>{itemProducts()}</div>
     </div>
   );
 }

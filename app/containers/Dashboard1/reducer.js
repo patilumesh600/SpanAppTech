@@ -14,7 +14,8 @@ export const initialState = {
 const dashboardReducer = (state = initialState, action) =>
   produce(state, (/* draft */) => {
     switch (action.type) {
-      case DEFAULT_ACTION:activeItemIndex1='222'
+      case DEFAULT_ACTION:
+        activeItemIndex1 = '222';
         break;
     }
   });
