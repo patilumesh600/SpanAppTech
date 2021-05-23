@@ -13,7 +13,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import FeaturePage from 'containers/FeaturePage/Loadable';
-import Dashboard1 from 'containers/Dashboard1/Loadable';
+import Dashboard from 'containers/Dashboard/Loadable';
+import DashboardNew from 'containers/DashboardNew/Loadable';
 import OrderSummary from 'containers/OrderSummary/Loadable';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
@@ -46,9 +47,9 @@ export default function App() {
       {loc !== 'login' && loc !== 'register' && <Header />}
       <Switch>
         <Route exact path="/home" component={HomePage} />
-        <Route exact path="/" component={Dashboard1} />
+        <Route exact path="/" component={Dashboard} />
         <Route path="/features" component={FeaturePage} />
-        <Route path="/dashboard" component={Dashboard1} />
+        <Route path="/dashboard" component={DashboardNew} />
         <Route path="/ordersummary" component={OrderSummary} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Registration} />
