@@ -30,6 +30,7 @@ const AppWrapper = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: column;
+  width: 100%;
 `;
 
 export default function App() {

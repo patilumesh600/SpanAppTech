@@ -1,4 +1,11 @@
-#div1 img,#div2 img{
+/* #div1 img,#div2 img{
     height: 175px !important;
     padding: 2%;
+} */
+
+.slick-slide img{
+    display: inherit !important;
 }
+/* .slick-slide{
+    padding: 1% !important;
+} */

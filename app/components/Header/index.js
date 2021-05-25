@@ -82,7 +82,12 @@ function Header() {
   return (
     <div
       className="row col-md-12"
-      style={{ background: '#4f9fcf', padding: '1%', color: '#FFF' }}
+      style={{
+        background: '#4f9fcf',
+        padding: '1%',
+        color: '#FFF',
+        margin: '0px',
+      }}
     >
       <div className="col-md-4">
         <a href="/">
