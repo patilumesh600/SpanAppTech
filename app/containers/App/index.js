@@ -16,6 +16,7 @@ import FeaturePage from 'containers/FeaturePage/Loadable';
 import Dashboard from 'containers/Dashboard/Loadable';
 import DashboardNew from 'containers/DashboardNew/Loadable';
 import OrderSummary from 'containers/OrderSummary/Loadable';
+import SearchResult from 'containers/SearchResult';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -24,6 +25,7 @@ import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import '../../styles/common.css';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -54,6 +56,7 @@ export default function App() {
         <Route path="/ordersummary" component={OrderSummary} />
         <Route path="/login" component={Login} />
         <Route path="/register" component={Registration} />
+        <Route exact path="/search" component={SearchResult} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       {loc !== 'login' && loc !== 'register' && <Footer />}

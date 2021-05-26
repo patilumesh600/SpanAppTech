@@ -87,6 +87,7 @@
     "prop-types": "15.7.2",
     "react": "16.8.6",
     "react-alice-carousel": "^2.5.1",
+    "react-bootstrap": "^1.6.0",
     "react-dom": "16.8.6",
     "react-helmet": "6.0.0-beta",
     "react-hook-carousel": "0.0.3",

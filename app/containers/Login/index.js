@@ -13,14 +13,12 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose, bindActionCreators } from 'redux';
 
-// import { login } from './actions';
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import * as loginActions from './actions';
 import makeSelectLogin from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
 
 export function Login(props) {
   useInjectReducer({ key: 'login', reducer });
@@ -48,6 +46,7 @@ export function Login(props) {
   // );
 
   return (
+    // <form className="form" style={{ marginTop: '8%',backgroundColor: 'rgba(255, 255, 255, 0.7)' }}>
     <form className="form" style={{ marginTop: '8%' }}>
       <h3>Log in</h3>
 
