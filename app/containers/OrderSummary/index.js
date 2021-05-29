@@ -139,9 +139,8 @@ export function OrderSummary() {
     </div>
     </div>  */}
 
-      <div style={{ background: '#FFF' }}>
+      <div>
         <div className="col-lg-10 offset-lg-1 fontSize18px padd0" style={{ fontWeight: '500' }}>
-        >
           Shopping Cart
         </div>
 
@@ -256,7 +255,7 @@ export function OrderSummary() {
 
           <div className="row col-md-12 textAlignCenter border1pxSolid" style={{ padding: '1%' }}>
             <div className="col-md-2 offset-md-7 cart_item_image " style={{ textAlign:'right', fontWeight: '500' }}>
-            >
+           
               Order Total:
             </div>  
             <div className="col-md-2">
@@ -266,11 +265,11 @@ export function OrderSummary() {
                             
             </div>                  
           </div>
-            className="cart_buttons"
-            style={{ marginRight: '1%', marginBottom: '13%' }}
+          <div className="cart_buttons"
+            style={{ marginRight: '1%' }}>
             <button type="button" className="button cart_button_clear">Continue Shopping</button> 
-            <button type="button" className="button cart_button_checkout">Checkout</button> </div>
-            </button>{' '}
+            <button type="button" className="button cart_button_checkout">Checkout</button> 
+          </div>
         </div>
       </div>
 

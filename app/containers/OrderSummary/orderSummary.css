@@ -151,8 +151,9 @@ ul {
 }
 
 .cart_buttons {
-    margin-top: 60px;
-    text-align: right
+    /* margin-top: 60px; */
+    text-align: right;
+    padding-bottom: 1%;
 }
 
 .cart_button_clear {
