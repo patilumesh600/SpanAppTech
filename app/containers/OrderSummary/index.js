@@ -4,7 +4,7 @@
  *
  */
 
- import React, { useState, memo } from 'react';
+import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
@@ -26,7 +26,11 @@ import './orderSummary.css';
 //   faCalendarAlt,
 //   faStar,
 // } from '@fortawesome/free-regular-svg-icons';
-import { faLongArrowAltLeft, faAngleDown, faTrash} from '@fortawesome/free-solid-svg-icons';
+import {
+  faLongArrowAltLeft,
+  faAngleDown,
+  faTrash,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export function OrderSummary() {
@@ -36,13 +40,13 @@ export function OrderSummary() {
   const [quantyValue, setQuantityValue] = useState(1);
   const handleIncrementDecrementValue = (e, mode) => {
     e.preventDefault();
-      if(mode==='I'){
-        setQuantityValue(quantyValue+1);
-      } else if(quantyValue>1) {
-        setQuantityValue(quantyValue-1);
-      }
-    };
- 
+    if(mode==='I'){
+      setQuantityValue(quantyValue+1);
+    } else if(quantyValue>1) {
+      setQuantityValue(quantyValue-1);
+    }
+  };
+
   return (
     <div style={{ background: '#FFF' }}>
       <Helmet>
@@ -51,7 +55,7 @@ export function OrderSummary() {
       </Helmet>
       {/* <FormattedMessage {...messages.header} /> */}
 
-    {/* <div className="cart_section">
+      {/* <div className="cart_section">
       <div className="container-fluid">
         <div className="row">
             <div className="col-lg-10 offset-lg-1">
@@ -135,147 +139,140 @@ export function OrderSummary() {
     </div>
     </div>  */}
 
+      <div style={{ background: '#FFF' }}>
+        <div className="col-lg-10 offset-lg-1 fontSize18px padd0" style={{ fontWeight: '500' }}>
+        >
+          Shopping Cart
+        </div>
 
-          <div style={{ background: '#FFF' }}>
-              <div className="col-lg-10 offset-lg-1 fontSize18px padd0" style={{ fontWeight: '500' }}>
-                  Shopping Cart
-          </div>
+        <div className="col-lg-10 offset-lg-1 fontSize18px">
+          <div className="row col-md-12 textAlignCenter">
+            <div className="col-md-1">
 
-              <div className="col-lg-10 offset-lg-1 fontSize18px">
-                  <div className="row col-md-12 textAlignCenter">
-                      <div className="col-md-1">
-
-                      </div>
-                      <div className="col-md-2">
+            </div>
+            <div className="col-md-2">
                           Name
-                        </div>
-                      <div className="col-md-2">
+            </div>
+            <div className="col-md-2">
                           Quantity
-                        </div>
-                      <div className="col-md-2">
+            </div>
+            <div className="col-md-2">
                           Price
-                        </div>
-                      <div className="col-md-2">
+            </div>
+            <div className="col-md-2">
                           Discount
-                        </div>
-                      <div className="col-md-2">
+            </div>
+            <div className="col-md-2">
                           Total
-                        </div>
-                      <div className="col-md-1">
+            </div>
+            <div className="col-md-1">
 
-                      </div>
-                  </div>
-
-                  <div className="row col-md-12 textAlignCenter border1pxSolid">
-                      <div className="col-md-1 cart_item_image">
-                          <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          Samsung C7 Pro
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-
-                          <div class="input-group" style={{ marginLeft: '15%' }}>
-                              <input type="button" value="-" class="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
-                              <input type="number" step="1" max="" value={quantyValue} name="quantity" class="quantity-field" />
-                              <input type="button" value="+" class="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
-                          </div>
-
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹22000
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          0
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹ 22000
-                        </div>
-                      <div className="col-md-1 paddTop1Per">
-                          <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
-                      </div>
-                  </div>
-
-                  <div className="row col-md-12 textAlignCenter border1pxSolid">
-                      <div className="col-md-1 cart_item_image">
-                          <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          Samsung C7 Pro
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-
-                      <div class="input-group" style={{ marginLeft: '15%' }}>
-                              <input type="button" value="-" class="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
-                              <input type="number" step="1" max="" value={quantyValue} name="quantity" class="quantity-field" />
-                              <input type="button" value="+" class="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
-                      </div>
-
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹22000
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          0
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹ 22000
-                        </div>
-                      <div className="col-md-1 paddTop1Per">
-                          <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
-                      </div>
-                  </div>
-
-                  <div className="row col-md-12 textAlignCenter border1pxSolid">
-                      <div className="col-md-1 cart_item_image">
-                          <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          Samsung C7 Pro
-                        </div>
-                      <div className="col-md-2" style={{ paddingTop: '0.5%' }}>
-
-
-                      <div class="input-group" style={{ marginLeft: '15%' }}>
-                              <input type="button" value="-" class="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
-                              <input type="number" step="1" max="" value={quantyValue} name="quantity" class="quantity-field" />
-                              <input type="button" value="+" class="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
-                          </div>
-
-
-                      </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹22000
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          0
-                        </div>
-                      <div className="col-md-2 paddTop1Per">
-                          ₹ 22000
-                        </div>
-                      <div className="col-md-1 paddTop1Per">
-                          <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
-                      </div>
-                  </div>
-
-                  <div className="row col-md-12 textAlignCenter border1pxSolid" style={{ padding: '1%' }}>
-                      <div className="col-md-2 offset-md-7 cart_item_image " style={{ textAlign:'right', fontWeight: '500' }}>
-                      Order Total:
-                      </div>  
-                      <div className="col-md-2">
-                      ₹ 1,10000
-                        </div> 
-                        <div className="col-md-1 paddTop1Per">
-                            
-                        </div>                  
-                  </div>
-
-                  <div className="cart_buttons" style={{ marginRight: '1%', marginBottom: '13%' }}> 
-                    <button type="button" className="button cart_button_clear">Continue Shopping</button> 
-                    <button type="button" className="button cart_button_checkout">Checkout</button> </div>
-                  
-              </div>
+            </div>
           </div>
+
+          <div className="row col-md-12 textAlignCenter border1pxSolid">
+            <div className="col-md-1 cart_item_image">
+              <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          Samsung C7 Pro
+            </div>
+            <div className="col-md-2 paddTop1Per">
+              <div className="input-group" style={{ marginLeft: '15%' }}>
+                <input type="button" value="-" className="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
+                <input type="number" step="1" max="" value={quantyValue} name="quantity" className="quantity-field" />
+                <input type="button" value="+" className="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
+              </div>
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹22000
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          0
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹ 22000
+            </div>
+            <div className="col-md-1 paddTop1Per">
+              <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
+            </div>
+          </div>
+
+          <div className="row col-md-12 textAlignCenter border1pxSolid">
+            <div className="col-md-1 cart_item_image">
+              <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          Samsung C7 Pro
+            </div>
+            <div className="col-md-2 paddTop1Per">
+              <div className="input-group" style={{ marginLeft: '15%' }}>
+                <input type="button" value="-" className="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
+                <input type="number" step="1" max="" value={quantyValue} name="quantity" className="quantity-field" />
+                <input type="button" value="+" className="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
+              </div>
+              </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹22000
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          0
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹ 22000
+            </div>
+            <div className="col-md-1 paddTop1Per">
+              <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
+            </div>
+          </div>
+
+          <div className="row col-md-12 textAlignCenter border1pxSolid">
+            <div className="col-md-1 cart_item_image">
+              <img src="https://i.imgur.com/qqBRWD5.jpg" alt="" />
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          Samsung C7 Pro
+            </div>
+            <div className="col-md-2" style={{ paddingTop: '0.5%' }}>
+              <div className="input-group" style={{ marginLeft: '15%' }}>
+                <input type="button" value="-" className="button-minus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'D')}/>
+                <input type="number" step="1" max="" value={quantyValue} name="quantity" className="quantity-field" />
+                <input type="button" value="+" className="button-plus" data-field="quantity" onClick={(e) =>handleIncrementDecrementValue(e,'I')} />
+              </div>
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹22000
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          0
+            </div>
+            <div className="col-md-2 paddTop1Per">
+                          ₹ 22000
+            </div>
+            <div className="col-md-1 paddTop1Per">
+              <FontAwesomeIcon style={{ marginLeft: '5px' }} icon={faTrash} />
+            </div>
+          </div>
+
+          <div className="row col-md-12 textAlignCenter border1pxSolid" style={{ padding: '1%' }}>
+            <div className="col-md-2 offset-md-7 cart_item_image " style={{ textAlign:'right', fontWeight: '500' }}>
+            >
+              Order Total:
+            </div>  
+            <div className="col-md-2">
+                      ₹ 1,10000
+            </div> 
+            <div className="col-md-1 paddTop1Per">
+                            
+            </div>                  
+          </div>
+            className="cart_buttons"
+            style={{ marginRight: '1%', marginBottom: '13%' }}
+            <button type="button" className="button cart_button_clear">Continue Shopping</button> 
+            <button type="button" className="button cart_button_checkout">Checkout</button> </div>
+            </button>{' '}
+        </div>
+      </div>
 
 
     </div>

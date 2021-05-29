@@ -88,7 +88,7 @@ export function Login(props) {
       <button
         type="submit"
         onClick={e => handleOnLogin(e, userName, password)}
-        className="btn btn-dark btn-lg btn-block"
+        className="btnlogin btn btn-lg btn-block"
       >
         Sign in
       </button>

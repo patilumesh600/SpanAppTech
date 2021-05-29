@@ -69,7 +69,7 @@ export function Registration() {
         />
       </div>
 
-      <button type="submit" className="btn btn-dark btn-lg btn-block">
+      <button type="submit" className="btnlogin btn btn-lg btn-block">
         Register
       </button>
       <p className="forgot-password text-right">

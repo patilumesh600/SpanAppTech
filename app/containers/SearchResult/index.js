@@ -25,21 +25,18 @@ export function SearchResult() {
   useInjectSaga({ key: 'SearchResult', saga });
 
   return (
-    <RBS.Container
-      fluid
-      style={{ position: 'relative', padding: '0px,15px', marginTop: '4%' }}
-    >
+    <RBS.Container fluid style={{ position: 'relative', padding: '0px,15px' }}>
       <RBS.Row>
         <RBS.Col md={2}>
           <FilterSec />
         </RBS.Col>
         <RBS.Col
           md={10}
-          style={{ paddingTop: '15px', borderLeft: '1px solid #e1e1e1' }}
+          style={{ paddingTop: '1%', borderLeft: '1px solid #e1e1e1' }}
         >
           <div style={{ fontSize: '16px' }}>
             <RBS.Row>
-              <RBS.Col md={10}>Showing 4 Results for City Pune </RBS.Col>
+              <RBS.Col md={10}>Showing 4 Results </RBS.Col>
               <RBS.Col md={2}>
                 <RBS.Form.Control as="select" size="sm" placeholder="Sort By">
                   <option>Relevance</option>
