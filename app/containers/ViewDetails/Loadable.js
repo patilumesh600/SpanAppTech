@@ -1,6 +1,6 @@
 /**
  *
- * Asynchronously loads the component for ProductDetails
+ * Asynchronously loads the component for ViewDetails
  *
  */
 

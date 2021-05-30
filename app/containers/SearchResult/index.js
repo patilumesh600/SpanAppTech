@@ -107,12 +107,16 @@ function getDetails(data) {
       </RBS.Card.Body>
       <RBS.Card.Footer className="text-center">
         <small className="text-muted">
-          <RBS.Button variant="info" type="button" size="sm">
+          {/* <RBS.Button variant="info" type="button" size="sm">
             {' '}
             <FontAwesomeIcon icon={faEye} /> View Details
           </RBS.Button>
-          &nbsp;&nbsp;&nbsp;
-          <RBS.Button variant="success" type="button" size="sm">
+          &nbsp;&nbsp;&nbsp; */}
+          <RBS.Button
+            style={{ width: '100%', padding: '1%', fontSize: '18px' }}
+            type="button"
+            size="sm"
+          >
             {' '}
             <FontAwesomeIcon icon={faCartPlus} /> Add to Cart
           </RBS.Button>

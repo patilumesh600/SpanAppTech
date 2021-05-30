@@ -1,6 +1,6 @@
 /*
  *
- * ProductDetails actions
+ * ViewDetails actions
  *
  */
 

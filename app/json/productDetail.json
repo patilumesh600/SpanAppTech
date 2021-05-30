@@ -1,0 +1,239 @@
+{
+  "ID": 1,
+  "ModelCode": "REVOLT_RV400",
+  "Name": "Revolt RV 400",
+  "Descrption": "",
+  "ImageURLS": [
+    {
+      "ID": "1",
+      "Name": "",
+      "URL": "https://imgd.aeplcdn.com/393x221/bw/models/revolt-rv-400-premium20190828154717.jpg?q=85"
+    },
+    {
+      "ID": "2",
+      "Name": "",
+      "URL": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/revolt-select-model-black-1566996823969.jpg?q=80"
+    },
+    {
+      "ID": "3",
+      "Name": "",
+      "URL": "https://imgd.aeplcdn.com/1280x720/n/cw/ec/40710/rv-400-head-light.jpeg?q=80"
+    },
+    {
+      "ID": "4",
+      "Name": "",
+      "URL": "https://imgd.aeplcdn.com/1280x720/bw/ec/40710/Revolt-RV400-Front-160541.jpg?wm=0&q=80"
+    }
+  ],
+  "KeySpecififcation": [
+    {
+      "ID": "1",
+      "Name": "Range",
+      "Value": "80-150 Km",
+      "IconURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/range.svg"
+    },
+    {
+      "ID": "2",
+      "Name": "Top Speed",
+      "Value": "45-85 Kmph",
+      "IconURL": "https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/top-speed.svg"
+    },
+    {
+      "ID": "3",
+      "Name": "Charging Time",
+      "Value": "4.5 Hrs",
+      "IconURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/battery-charging-time.svg"
+    },
+    {
+      "ID": "4",
+      "Name": "Motor Power (Rated)",
+      "Value": "3000 W",
+      "IconURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/power.svg"
+    }
+  ],
+  "Variant": [
+    { "ID": "1", "Name": "RV 400 Standard" },
+    { "ID": "2", "Name": "RV 400 Premium" }
+  ],
+  "City": [
+    { "ID": "1", "Name": "Pune" },
+    { "ID": "2", "Name": "Mumbai" },
+    { "ID": "3", "Name": "Delhi" },
+    { "ID": "4", "Name": "Chennai" },
+    { "ID": "5", "Name": "Banglore" },
+    { "ID": "6", "Name": "Kolkatta" }
+  ],
+  "Features": [
+    { "ID": "1", "Name": "Odometer", "Value": "Digital" },
+    { "ID": "2", "Name": "Regenerative breaking", "Value": "--" },
+    { "ID": "3", "Name": "Reverse mode", "Value": "--" },
+    { "ID": "4", "Name": "Stand Alarm", "Value": "No" },
+    { "ID": "5", "Name": "Stepped Seat", "Value": "No" },
+    { "ID": "6", "Name": "No. of Tripmeters", "Value": "2" },
+    { "ID": "7", "Name": "Touch screen display", "Value": "Yes" },
+    { "ID": "8", "Name": "DRLs (Daytime running lights)", "Value": "Yes" },
+    { "ID": "9", "Name": "Mobile App Connectivity", "Value": "Yes" },
+    { "ID": "10", "Name": "GPS & Navigation", "Value": "Yes" },
+    { "ID": "11", "Name": "Central locking system", "Value": "Yes" },
+    { "ID": "12", "Name": "Artificial sound", "Value": "Yes" },
+    { "ID": "13", "Name": "Parking assist", "Value": "Yes" },
+    { "ID": "14", "Name": "Hill Assist", "Value": "No" },
+    { "ID": "15", "Name": "Anti theft system", "Value": "No" },
+    { "ID": "16", "Name": "Geo fencing", "Value": "Yes" },
+    { "ID": "17", "Name": "Start/stop button", "Value": "Yes" },
+    { "ID": "18", "Name": "USB charging port", "Value": "No" },
+    { "ID": "19", "Name": "Front storage box", "Value": "No" },
+    { "ID": "20", "Name": "Under seat storage", "Value": "No" },
+    { "ID": "21", "Name": "Speedometer", "Value": "Digital" },
+    { "ID": "22", "Name": "Tachometer", "Value": "Digital" },
+    { "ID": "23", "Name": "Tripmeter Type", "Value": "Digital" },
+    { "ID": "24", "Name": "Low Battery Indicator", "Value": "Yes" },
+    { "ID": "25", "Name": "Pillion Backrest", "Value": "No" },
+    { "ID": "26", "Name": "Pillion Grabrail", "Value": "Yes" },
+    { "ID": "27", "Name": "Pillion Seat", "Value": "Yes" },
+    { "ID": "28", "Name": "Pillion Footrest", "Value": "Yes" },
+    { "ID": "29", "Name": "Start Type", "Value": "Electric Start" },
+    { "ID": "30", "Name": "Shift Light", "Value": "No" },
+    { "ID": "31", "Name": "Killswitch", "Value": "Yes" },
+    { "ID": "32", "Name": "Clock", "Value": "Yes" },
+    { "ID": "33", "Name": "Headlight Type", "Value": "LED Head Lamp" },
+    { "ID": "34", "Name": "Headlight Bulb Type", "Value": "--" },
+    { "ID": "35", "Name": "Brake/Tail Light", "Value": "LED Tail Lamp" },
+    { "ID": "36", "Name": "Turn Signal", "Value": "LED" },
+    { "ID": "37", "Name": "Pass Light", "Value": "Yes" },
+    {
+      "ID": "38",
+      "Name": "Additional features",
+      "Value": "Smart Remote Control, MyRevolt app, Switchable Battery, Ergonomically poisitioned seat, Adjustable foot pegs, Highest Ground Clearance, Customized Sound"
+    }
+  ],
+  "Specififcation": [
+    {
+      "ID": "1",
+      "Name": "Power & Performance",
+      "ICONURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/engine-outline.svg",
+      "SubSpeicification": [
+        { "ID": "1", "Name": "Fuel Type", "Value": "Electric" },
+        { "ID": "2", "Name": "Max Power", "Value": "--" },
+        { "ID": "3", "Name": "Rated Power", "Value": "3000 W" },
+        { "ID": "4", "Name": "Battery charging time", "Value": "4.5 Hrs" },
+        { "ID": "5", "Name": "Fast charging time", "Value": "--" },
+        { "ID": "6", "Name": "Carrying capacity", "Value": "" },
+        { "ID": "7", "Name": "", "Value": "150 kg" },
+        { "ID": "8", "Name": "Max Torque", "Value": "--" },
+        { "ID": "9", "Name": "Transmission", "Value": "Automatic" },
+        { "ID": "10", "Name": "Riding Range", "Value": "80-150 Km" },
+        { "ID": "11", "Name": "Top Speed", "Value": "45-85 Kmph" },
+        { "ID": "12", "Name": "Battery capacity", "Value": "3.24 kWh" },
+        { "ID": "13", "Name": "Battery type", "Value": "Lithium Ion" },
+        { "ID": "14", "Name": "Motor type", "Value": "Hub Motor" },
+        { "ID": "15", "Name": "Charger output", "Value": "15Amp" }
+      ]
+    },
+    {
+      "ID": "2",
+      "Name": "Brakes, Wheels & Suspension",
+      "ICONURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/brake-outline.svg",
+      "SubSpeicification": [
+        { "ID": "1", "Name": "Braking System", "Value": "CBS" },
+        { "ID": "2", "Name": "Front Brake Type", "Value": "Disc" },
+        { "ID": "3", "Name": "Front Brake Size", "Value": "240 mm" },
+        { "ID": "4", "Name": "Front Tyre Size", "Value": "90/80-17" },
+        { "ID": "5", "Name": "Rear Tyre Size", "Value": "120/80-17" },
+        { "ID": "6", "Name": "Tyre Type", "Value": "Tubeless" },
+        { "ID": "7", "Name": "Rear Brake Type", "Value": "Disc" },
+        { "ID": "8", "Name": "Rear Brake Size", "Value": "240 mm" },
+        { "ID": "9", "Name": "Calliper Type", "Value": "--" },
+        { "ID": "10", "Name": "Front Wheel Size", "Value": "17 inch" },
+        { "ID": "11", "Name": "Rear Wheel Size", "Value": "17 inch" },
+        { "ID": "12", "Name": "Radial Tyres", "Value": "No" },
+        { "ID": "13", "Name": "Wheel Type", "Value": "Alloy" },
+        {
+          "ID": "14",
+          "Name": "Front Suspension",
+          "Value": "Upside Down Forks"
+        },
+        {
+          "ID": "15",
+          "Name": "Rear Suspension",
+          "Value": "Monoshock(Adjustable)"
+        }
+      ]
+    },
+    {
+      "ID": "3",
+      "Name": "Power & Performance",
+      "ICONURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/chasis-outline.svg",
+      "SubSpeicification": [
+        { "ID": "1", "Name": "Kerb Weight", "Value": "108 kg" },
+        { "ID": "2", "Name": "Overall Length", "Value": "--" },
+        { "ID": "3", "Name": "Overall Width", "Value": "--" },
+        { "ID": "4", "Name": "Wheelbase", "Value": "1,350 mm" },
+        { "ID": "5", "Name": "Ground Clearance", "Value": "215 mm" },
+        { "ID": "6", "Name": "Seat Height", "Value": "814 mm" },
+        { "ID": "7", "Name": "Overall Height", "Value": "--" },
+        {
+          "ID": "8",
+          "Name": "Chassis Type",
+          "Value": "Lightweight Single cradle Frame"
+        }
+      ]
+    },
+    {
+      "ID": "4",
+      "Name": "Manufacturer Warranty",
+      "ICONURL": "https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/warranty-outline.svg",
+      "SubSpeicification": [
+        {
+          "ID": "1",
+          "Name": "Battery warranty",
+          "Value": "Whichever comes first out of 1,50,000 kms or 8 Year"
+        },
+        { "ID": "2", "Name": "Motor warranty", "Value": "5 Year" },
+        { "ID": "3", "Name": "", "Value": "" }
+      ]
+    }
+  ],
+  "RatingCriteria": [
+    { "ID": "1", "Name": "Visual Appeal", "Value": "4" },
+    { "ID": "3", "Name": "Performance", "Value": "3" },
+    { "ID": "4", "Name": "Comfort", "Value": "4.5" },
+    { "ID": "5", "Name": "Service Experience", "Value": "4" },
+    { "ID": "6", "Name": "Maintenance cost", "Value": "4.5" },
+    { "ID": "7", "Name": "Extra Features", "Value": "3" }
+  ],
+  "UserReviews": [
+    {
+      "ID": "1",
+      "Name": "Sanket",
+      "Rating": "4.5",
+      "Title": "Change the ride concept",
+      "Review": "Best bike. It is a royal bike,feels like young and energetic, very comfortable and good safety. My dream: revolt. Revolt is my love. Can silencer change bike. Superb royal bike.Best performance. King of roads.",
+      "Date": "1 year ago"
+    },
+    {
+      "ID": "2",
+      "Name": "Umesh",
+      "Rating": "4",
+      "Title": "Supper electric bike with nice look",
+      "Review": "I seen this bike on road. Very nice bike and good for drive and no pollution .This bike pollution free this is very good . My dream buy this bike .This bike all city drive and very good for highway . ",
+      "Date": "3 month ago"
+    },
+    {
+      "ID": "3",
+      "Name": "Ashwini",
+      "Rating": "3",
+      "Title": "Dream bike for youngsters",
+      "Review": "I have seen videos. Revolt rv 400 will sure bring the change in market also in future. I like the futuristic technology anti-theft system gps service.",
+      "Date": "5 month ago"
+    },
+    {
+      "ID": "4",
+      "Name": "Rohit",
+      "Rating": "3.5",
+      "Title": "Amazing sporty bike revolt rv400",
+      "Review": "It's a good and eco friendly bike. Very less maintenance and it's like you are riding normal bike.. You can drive on highway also but company should built-in charging station on at-least main highway and city",
+      "Date": "6 month ago"
+    }
+  ]
+}

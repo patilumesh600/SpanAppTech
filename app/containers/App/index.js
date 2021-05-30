@@ -17,7 +17,7 @@ import Dashboard from 'containers/Dashboard/Loadable';
 import DashboardNew from 'containers/DashboardNew/Loadable';
 import OrderSummary from 'containers/OrderSummary/Loadable';
 import SearchResult from 'containers/SearchResult';
-import Productdetails from 'containers/Productdetails';
+import ViewDetails from 'containers/ViewDetails';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -73,7 +73,7 @@ export default function App() {
   `;
 
   return (
-    <div>
+    <div style={{ background: '#FFF' }}>
       {standAlonePages.indexOf(window.location.pathname.toLowerCase()) !==
       -1 ? null : (
           <Header />
@@ -94,7 +94,7 @@ export default function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Registration} />
           <Route exact path="/search" component={SearchResult} />
-          <Route exact path="/productdetails" component={Productdetails} />
+          <Route exact path="/viewdetails" component={ViewDetails} />
 
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/home" component={HomePage} />

@@ -1,6 +1,6 @@
 /**
  *
- * Tests for ProductDetails
+ * Tests for ViewDetails
  *
  * @see https://github.com/react-boilerplate/react-boilerplate/tree/master/docs/testing
  *
@@ -8,21 +8,15 @@
 
 import React from 'react';
 import { render } from 'react-testing-library';
-import { IntlProvider } from 'react-intl';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import { ProductDetails } from '../index';
-import { DEFAULT_LOCALE } from '../../../i18n';
+import { ViewDetails } from '../index';
 
-describe('<ProductDetails />', () => {
+describe('<ViewDetails />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
     const dispatch = jest.fn();
-    render(
-      <IntlProvider locale={DEFAULT_LOCALE}>
-        <ProductDetails dispatch={dispatch} />
-      </IntlProvider>,
-    );
+    render(<ViewDetails dispatch={dispatch} />);
     expect(spy).not.toHaveBeenCalled();
   });
 
@@ -38,11 +32,7 @@ describe('<ProductDetails />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(
-      <IntlProvider locale={DEFAULT_LOCALE}>
-        <ProductDetails />
-      </IntlProvider>,
-    );
+    } = render(<ViewDetails />);
     expect(firstChild).toMatchSnapshot();
   });
 });
