@@ -15,20 +15,48 @@ import { compose } from 'redux';
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import * as RBS from 'react-bootstrap';
-import { faStar, faRupeeSign, faCar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faStar,
+  faRupeeSign,
+  faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CarouselNew from 'react-multi-carousel';
 import makeSelectViewDetails from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+
+import 'react-multi-carousel/lib/styles.css';
+
 import './details.css';
 
-import banImg1 from '../../images/icon-512x512.png';
+import banImg1 from 'images/cartridge.jpg';
 import productDetail from '../../json/productDetail.json';
 import ProgressBar from 'react-customizable-progressbar';
 
 export function ViewDetails() {
   useInjectReducer({ key: 'viewDetails', reducer });
   useInjectSaga({ key: 'viewDetails', saga });
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <RBS.Row>
@@ -44,7 +72,7 @@ export function ViewDetails() {
         <RBS.Col md={12} className="vheader">
           <div className="inline-block">
             <h3>
-              Revolt RV 400{' '}
+              HP INK CARTRIDGE 685 CYAN{' '}
               <span style={{ color: '#13B65D', fontSize: '16px' }}>
                 {' '}
                 <FontAwesomeIcon icon={faStar} /> 4.5
@@ -65,103 +93,44 @@ export function ViewDetails() {
                   )}
                 </RBS.Carousel>
               </RBS.Col>
-              <RBS.Col md={6}>
+              <RBS.Col md={6} style={{ borderLeft: '1px solid #d3d3d3' }}>
                 <RBS.Col
                   md={12}
                   className="font12 text-light-grey margin-bottom20"
                 >
-                  <span className="inline-block margin-right15">Key specs</span>
-                  <ul id="key-specs-list" className="inline-block">
+                  {/* <span className="inline-block margin-right15">Key specs</span> */}
+                  <ul style={{ padding: '0px' }}>
                     <li>
-                      <img
-                        src="https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/range.svg"
-                        width="16"
-                        height="14"
-                        className="inline-block margin-right5"
-                        alt="Riding Range"
-                        title="Riding Range"
-                      />
-                      80-150 Km
+                      <b>Brand:</b> HP
                     </li>
                     <li>
-                      <img
-                        src="https://imgd.aeplcdn.com/0x0/cw/static/icons/svg/top-speed.svg"
-                        width="16"
-                        height="14"
-                        className="inline-block margin-right5"
-                        alt="Top Speed"
-                        title="Top Speed"
-                      />
-                      45-85 Kmph
+                      <b>Model no:</b> CZ122AA
                     </li>
                     <li>
-                      <img
-                        src="https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/battery-charging-time.svg"
-                        width="16"
-                        height="14"
-                        className="inline-block margin-right5"
-                        alt="Battery charging time"
-                        title="Battery charging time"
-                      />
-                      4.5 Hrs
+                      <b>Colour :</b> Cyan Ink Type- Dye based
                     </li>
                     <li>
-                      <img
-                        src="https://imgd.aeplcdn.com/0x0/bw/static/icons/a2a2a2/power.svg"
-                        width="16"
-                        height="14"
-                        className="inline-block margin-right5"
-                        alt="Rated Power"
-                        title="Rated Power"
-                      />
-                      3000 W
+                      <b>Page Yield :</b> 300 pages
                     </li>
                   </ul>
                 </RBS.Col>
-                <RBS.Row>
-                  <RBS.Col md={4}>
-                    <h6>Version</h6>
-                    <RBS.Form.Control
-                      as="select"
-                      size="sm"
-                      placeholder="Sort By"
-                    >
-                      <option>Premium</option>
-                      <option>Standard</option>
-                    </RBS.Form.Control>
-                  </RBS.Col>
-                  <RBS.Col md={4}>
-                    <h6>Location</h6>
-                    <RBS.Form.Control
-                      as="select"
-                      size="sm"
-                      placeholder="Sort By"
-                    >
-                      <option>Pune</option>
-                      <option>Mumbai</option>
-                      <option>Delhi</option>
-                      <option>banglore</option>
-                    </RBS.Form.Control>
-                  </RBS.Col>
-                </RBS.Row>
-                <br />
-                <RBS.Row>
+                <RBS.Row style={{ marginLeft: '0px' }}>
                   <RBS.Col
                     md={4}
                     className="text-light-grey"
                     style={{ fontSize: '14px' }}
                   >
-                    On-road price in Pune
+                    <b>Price</b>
                   </RBS.Col>
                   <RBS.Col
                     md={8}
                     className="text-light-grey"
                     style={{ fontSize: '14px' }}
                   >
-                    Available Colours
+                    <b>Available Colours</b>
                   </RBS.Col>
                 </RBS.Row>
-                <RBS.Row>
+                <RBS.Row style={{ marginLeft: '0px' }}>
                   <RBS.Col md={4}>
                     <h4>
                       {' '}
@@ -195,18 +164,10 @@ export function ViewDetails() {
                 </RBS.Row>
                 <hr />
                 <br />
-                <RBS.Row>
+                <RBS.Row style={{ marginLeft: '0px' }}>
                   <RBS.Col md={5}>
-                    <RBS.Button variant="warning" type="button" block>
-                      {' '}
-                      <FontAwesomeIcon icon={faCar} /> Book Test Ride
-                    </RBS.Button>
-                  </RBS.Col>
-                  <RBS.Col md={5}>
-                    <RBS.Button variant="success" type="button" block>
-                      {' '}
-                      <FontAwesomeIcon icon={faRupeeSign} /> View Detailed
-                      Pricing
+                    <RBS.Button type="button" block>
+                      <FontAwesomeIcon icon={faInfoCircle} /> View Detail
                     </RBS.Button>
                   </RBS.Col>
                 </RBS.Row>
@@ -214,7 +175,7 @@ export function ViewDetails() {
             </RBS.Row>
           </RBS.Tab>
 
-          <RBS.Tab eventKey="price" title="Pricing" className="detailtab">
+          <RBS.Tab eventKey="price" title="More Info" className="detailtab">
             <RBS.Row>
               <RBS.Col
                 md={4}
@@ -225,143 +186,26 @@ export function ViewDetails() {
                 }}
               />
               <RBS.Col md={8}>
-                <RBS.Row>
-                  <RBS.Col md={4}>
-                    <h6>Version</h6>
-                    <RBS.Form.Control
-                      as="select"
-                      size="sm"
-                      placeholder="Sort By"
-                    >
-                      <option>Premium</option>
-                      <option>Standard</option>
-                    </RBS.Form.Control>
-                  </RBS.Col>
-                  <RBS.Col md={4}>
-                    <h6>Location</h6>
-                    <RBS.Form.Control
-                      as="select"
-                      size="sm"
-                      placeholder="Sort By"
-                    >
-                      <option>Pune</option>
-                      <option>Mumbai</option>
-                      <option>Delhi</option>
-                      <option>banglore</option>
-                    </RBS.Form.Control>
-                  </RBS.Col>
-                </RBS.Row>
-                <br />
                 <RBS.Accordion defaultActiveKey="0">
                   <RBS.Card>
                     <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="0">
-                      Premium (Electric Battery)
+                      Product Inforamtion
                     </RBS.Accordion.Toggle>
                     <RBS.Accordion.Collapse eventKey="0">
                       <RBS.Card.Body>
                         <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>Ex-Showroom Price</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;1,47,963
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>RTO</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;0
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>Insurance (Comprehensive)</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;4,915
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <hr />
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <h6>On-road price in Pune</h6>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <h6>
-                              <FontAwesomeIcon icon={faRupeeSign} />
-                              &nbsp;&nbsp;1,52,878
-                            </h6>
-                          </RBS.Col>
-                        </RBS.Row>
-                      </RBS.Card.Body>
-                    </RBS.Accordion.Collapse>
-                  </RBS.Card>
-                  <RBS.Card>
-                    <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="1">
-                      Standard (Electric Battery)
-                    </RBS.Accordion.Toggle>
-                    <RBS.Accordion.Collapse eventKey="1">
-                      <RBS.Card.Body>
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>Ex-Showroom Price</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;1,47,963
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>RTO</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;0
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <span>Insurance (Comprehensive)</span>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <span>
-                              {' '}
-                              <FontAwesomeIcon icon={faRupeeSign} />{' '}
-                              &nbsp;&nbsp;4,915
-                            </span>
-                          </RBS.Col>
-                        </RBS.Row>
-                        <hr />
-                        <RBS.Row>
-                          <RBS.Col md={6}>
-                            <h6>On-road price in Pune</h6>
-                          </RBS.Col>
-                          <RBS.Col md={6}>
-                            <h6>
-                              <FontAwesomeIcon icon={faRupeeSign} />
-                              &nbsp;&nbsp;1,52,878
-                            </h6>
+                          <RBS.Col md={12}>
+                            <p>
+                              HP ink cartridges are designed to be free of
+                              defects, formulated to prevent printhead damage,
+                              and ready to load in a snap. This Cartridge is
+                              compatible with HP Deskjet Ink Advantage printer
+                              models - 1015, 4645 All-in-One, 3545 e All-in-One,
+                              3548 e All-in-One, 4515 e All-in-One, 4518 e
+                              All-in-One, 1515 All-in-One , 1518 All-in-One,
+                              2645 All-in-One, 2648 All-in-One, 2515 All-in-One
+                              , 2545 All In One, 3515 e All-in-One.
+                            </p>
                           </RBS.Col>
                         </RBS.Row>
                       </RBS.Card.Body>
@@ -372,7 +216,7 @@ export function ViewDetails() {
             </RBS.Row>
           </RBS.Tab>
 
-          <RBS.Tab eventKey="specs" title="Specification" className="detailtab">
+          {/* <RBS.Tab eventKey="specs" title="Specification" className="detailtab">
             <RBS.Col md={12}>
               <RBS.Accordion defaultActiveKey="4">
                 {productDetail.Specififcation.map(data =>
@@ -380,15 +224,15 @@ export function ViewDetails() {
                 )}
               </RBS.Accordion>
             </RBS.Col>
-          </RBS.Tab>
+          </RBS.Tab> */}
 
-          <RBS.Tab eventKey="feature" title="Features" className="detailtab">
+          {/* <RBS.Tab eventKey="feature" title="Features" className="detailtab">
             <RBS.Col md={12}>
               <RBS.Row>
                 {productDetail.Features.map(data => bindBikeFeatures(data))}
               </RBS.Row>
             </RBS.Col>
-          </RBS.Tab>
+          </RBS.Tab> */}
 
           <RBS.Tab
             eventKey="User Reviews"
@@ -404,6 +248,129 @@ export function ViewDetails() {
             <hr />
             <RBS.Row>
               {productDetail.UserReviews.map(data => bindReviewSummary(data))}
+            </RBS.Row>
+          </RBS.Tab>
+
+          <RBS.Tab
+            eventKey="RELATED PRODUCTS"
+            title="RELATED PRODUCTS"
+            className="detailtab"
+          >
+            <RBS.Row style={{ marginTop: '5%' }}>
+              <CarouselNew responsive={responsive}>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <img
+                    height="150px"
+                    src="https://venustradersonline.com/4012-thickbox_default/hp-ink-cartridge-685-cyan.jpg"
+                  />
+                  <div>
+                    Product name
+                    <br />
+                    <span itemProp="price" className="price product-price">
+                      {' '}
+                      ₹ 580.00{' '}
+                    </span>
+                  </div>
+                </div>
+              </CarouselNew>
             </RBS.Row>
           </RBS.Tab>
         </RBS.Tabs>
