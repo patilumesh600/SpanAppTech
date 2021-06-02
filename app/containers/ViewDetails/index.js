@@ -18,7 +18,7 @@ import * as RBS from 'react-bootstrap';
 import {
   faStar,
   faRupeeSign,
-  faInfoCircle,
+  faCartPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CarouselNew from 'react-multi-carousel';
@@ -166,8 +166,8 @@ export function ViewDetails() {
                 <br />
                 <RBS.Row style={{ marginLeft: '0px' }}>
                   <RBS.Col md={5}>
-                    <RBS.Button type="button" block>
-                      <FontAwesomeIcon icon={faInfoCircle} /> View Detail
+                    <RBS.Button type="button">
+                      <FontAwesomeIcon icon={faCartPlus} /> Add To Cart
                     </RBS.Button>
                   </RBS.Col>
                 </RBS.Row>
@@ -175,16 +175,24 @@ export function ViewDetails() {
             </RBS.Row>
           </RBS.Tab>
 
-          <RBS.Tab eventKey="price" title="More Info" className="detailtab">
+          <RBS.Tab
+            eventKey="price"
+            title="More Infomation"
+            className="detailtab"
+          >
             <RBS.Row>
-              <RBS.Col
+              {/* <RBS.Col
                 md={4}
                 style={{
                   padding: '15px',
-                  backgroundImage: `url(${banImg1})`,
+                  // backgroundImage: `url(${banImg1})`,
                   minHeight: '300px',
                 }}
-              />
+              /> */}
+              <RBS.Col md={4}>
+                <img style={{ width: '100%' }} src={banImg1} />
+              </RBS.Col>
+
               <RBS.Col md={8}>
                 <RBS.Accordion defaultActiveKey="0">
                   <RBS.Card>
@@ -205,6 +213,47 @@ export function ViewDetails() {
                               All-in-One, 1515 All-in-One , 1518 All-in-One,
                               2645 All-in-One, 2648 All-in-One, 2515 All-in-One
                               , 2545 All In One, 3515 e All-in-One.
+                            </p>
+                          </RBS.Col>
+                        </RBS.Row>
+                      </RBS.Card.Body>
+                    </RBS.Accordion.Collapse>
+                  </RBS.Card>
+                  <RBS.Card>
+                    <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="0">
+                      Features
+                    </RBS.Accordion.Toggle>
+                    <RBS.Accordion.Collapse eventKey="0">
+                      <RBS.Card.Body>
+                        <RBS.Row>
+                          <RBS.Col md={12}>
+                            <ul style={{ listStyle: 'square' }}>
+                              <li>Shop where you are</li>
+                              <li>Shop smarter</li>
+                              <li>Easy returns</li>
+                              <li>Quality checks</li>
+                              <li>Transit-safe packaging</li>
+                            </ul>
+                          </RBS.Col>
+                        </RBS.Row>
+                      </RBS.Card.Body>
+                    </RBS.Accordion.Collapse>
+                  </RBS.Card>
+                  <RBS.Card>
+                    <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="0">
+                      Manufacture
+                    </RBS.Accordion.Toggle>
+                    <RBS.Accordion.Collapse eventKey="0">
+                      <RBS.Card.Body>
+                        <RBS.Row>
+                          <RBS.Col md={12}>
+                            <p>
+                              Manufacturing is the production of goods through
+                              the use of labour, machinery, tools and biological
+                              or chemical processing or formulation. ... The
+                              materials are modified during various
+                              manufacturing processes to create the finished
+                              product.
                             </p>
                           </RBS.Col>
                         </RBS.Row>
@@ -251,12 +300,13 @@ export function ViewDetails() {
             </RBS.Row>
           </RBS.Tab>
 
-          <RBS.Tab
+          {/* <RBS.Tab
             eventKey="RELATED PRODUCTS"
             title="RELATED PRODUCTS"
             className="detailtab"
           >
             <RBS.Row style={{ marginTop: '5%' }}>
+              gjhghgjg hghgj hhhgghjgh hghghghggygyghgh hghgjhg 
               <CarouselNew responsive={responsive}>
                 <div className="text-center">
                   <img
@@ -372,7 +422,7 @@ export function ViewDetails() {
                 </div>
               </CarouselNew>
             </RBS.Row>
-          </RBS.Tab>
+          </RBS.Tab> */}
         </RBS.Tabs>
       </RBS.Col>
     </RBS.Row>
