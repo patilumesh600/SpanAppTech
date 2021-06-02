@@ -18,6 +18,7 @@ import DashboardNew from 'containers/DashboardNew/Loadable';
 import OrderSummary from 'containers/OrderSummary/Loadable';
 import SearchResult from 'containers/SearchResult';
 import ViewDetails from 'containers/ViewDetails';
+import Profile from 'containers/Profile';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -95,6 +96,7 @@ export default function App() {
           <Route exact path="/register" component={Registration} />
           <Route exact path="/search" component={SearchResult} />
           <Route exact path="/viewdetails" component={ViewDetails} />
+          <Route exact path="/profile" component={Profile} />
 
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/home" component={HomePage} />
