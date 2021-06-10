@@ -1,3 +1,5 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable indent */
 /**
  *
  * App
@@ -7,7 +9,7 @@
  */
 
 import React from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
@@ -19,6 +21,7 @@ import OrderSummary from 'containers/OrderSummary/Loadable';
 import SearchResult from 'containers/SearchResult';
 import ViewDetails from 'containers/ViewDetails';
 import Profile from 'containers/Profile';
+import SupplierProduct from 'containers/SupplierProduct';
 import Login from 'containers/Login/Loadable';
 import Registration from 'containers/Registration/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -29,18 +32,18 @@ import GlobalStyle from '../../global-styles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import '../../styles/common.css';
 
-const AppWrapper = styled.div`
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-  width: 100%;
-`;
+// const AppWrapper = styled.div`
+//   margin: 0 auto;
+//   display: flex;
+//   min-height: 100%;
+//   flex-direction: column;
+//   width: 100%;
+// `;
 
 export default function App() {
-  const path = window.location.pathname; // lets imaging that url is "/home/x"
-  const pathArray = path.split('/');
-  const loc = pathArray[1].toLocaleLowerCase();
+  // const path = window.location.pathname; // lets imaging that url is "/home/x"
+  // const pathArray = path.split('/');
+  // const loc = pathArray[1].toLocaleLowerCase();
   const standAlonePages = ['/login', '/register'];
   // return (
   //   <AppWrapper>
@@ -77,8 +80,8 @@ export default function App() {
     <div style={{ background: '#FFF' }}>
       {standAlonePages.indexOf(window.location.pathname.toLowerCase()) !==
       -1 ? null : (
-          <Header />
-        )}
+        <Header />
+      )}
       {/* <Sidebar /> */}
       <ContentSec
         style={{
@@ -97,6 +100,7 @@ export default function App() {
           <Route exact path="/search" component={SearchResult} />
           <Route exact path="/viewdetails" component={ViewDetails} />
           <Route exact path="/profile" component={Profile} />
+          <Route exact path="/supplierproduct" component={SupplierProduct} />
 
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/home" component={HomePage} />
@@ -106,7 +110,7 @@ export default function App() {
       </ContentSec>
       {standAlonePages.indexOf(window.location.pathname.toLowerCase()) !==
       -1 ? null : (
-          <Footer />
+        <Footer />
         )}
       <GlobalStyle />
     </div>
