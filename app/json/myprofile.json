@@ -3,12 +3,15 @@
   "Name": "Rohit H Sancheti",
   "MobileNumber": "9028768938",
   "EmailAddress": "sanchetirohit1@gmail.com",
+  "EmailAddress1": "phoenixsupplier@gmail.com",
   "Gender": "Male",
   "DateOfBirth": "10-DEC-1990",
   "Age": "31",
   "ImageURL": "https://media.zigcdn.com/media/user/2021/Mar/sanchetirohit120215274940.jpg",
+  "ImageURL1": "https://www.freeiconspng.com/uploads/circle-png-8.png",
   "MyBikeDetails": [],
   "MyCarDetails": [],
   "MyReviews": [],
-  "MyTestRides": []
+  "MyTestRides": [],
+  "Address": "Ganesh Nagar, Wadgaon Sheri, Pune, Maharashtra 411014"
 }

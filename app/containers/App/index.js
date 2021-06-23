@@ -13,8 +13,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+// import HomePage from 'containers/HomePage/Loadable';
+// import FeaturePage from 'containers/FeaturePage/Loadable';
 import Dashboard from 'containers/Dashboard/Loadable';
 import DashboardNew from 'containers/DashboardNew/Loadable';
 import OrderSummary from 'containers/OrderSummary/Loadable';
@@ -29,7 +29,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';''
 // import '../../styles/common.css';
 
 // const AppWrapper = styled.div`
@@ -103,8 +103,8 @@ export default function App() {
           <Route exact path="/supplierproduct" component={SupplierProduct} />
 
           <Route exact path="/" component={Dashboard} />
-          <Route exact path="/home" component={HomePage} />
-          <Route exact path="/features" component={FeaturePage} />
+          {/* <Route exact path="/home" component={HomePage} />
+          <Route exact path="/features" component={FeaturePage} /> */}
           <Route path="" component={NotFoundPage} />
         </Switch>
       </ContentSec>
