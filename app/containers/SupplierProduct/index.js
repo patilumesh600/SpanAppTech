@@ -51,8 +51,55 @@ export function SupplierProduct() {
     <div id="divUserProfile">
       <RBS.Row>
         <RBS.Col>
+          <RBS.Row
+            style={{ background: '#4f9fcf', color: '#FFF', padding: '0.2%' }}
+          >
+            <RBS.Col xs={12} md={2}>
+              <RBS.Image
+                src={personaldetails.ImageURL1}
+                roundedCircle
+                height="100"
+                width="100"
+              />
+            </RBS.Col>
+            <RBS.Col xs={12} md={4}>
+              <div
+                className="center"
+                style={{ fontSize: '18px', fontWeight: '600' }}
+              >
+                Phoenix Supplier
+              </div>
+              <div className="center" style={{ fontSize: '15px' }}>
+                {' '}
+                <FontAwesomeIcon icon={faPhone} />
+                &nbsp;&nbsp;
+                {personaldetails.MobileNumber}&nbsp;&nbsp; <br />
+                <FontAwesomeIcon icon={faEnvelope} />
+                &nbsp;
+                {personaldetails.EmailAddress1}
+                <br />
+                <FontAwesomeIcon icon={faAddressCard} />
+                &nbsp;&nbsp;
+                {personaldetails.Address}
+              </div>
+            </RBS.Col>
+          </RBS.Row>
+          <RBS.Row style={{ marginTop: '1%' }}>
+            <RBS.Col xs={12} md={12}>
+              <RBS.CardDeck>
+                {productDetails.map(data => getDetails(data))}
+              </RBS.CardDeck>
+            </RBS.Col>
+          </RBS.Row>
+          <RBS.Row style={{ marginTop: '1%' }}>
+            <RBS.Col xs={12} md={12}>
+              <RBS.CardDeck>
+                {productDetails.map(data => getDetails(data))}
+              </RBS.CardDeck>
+            </RBS.Col>
+          </RBS.Row>
           <RBS.Row>
-            <RBS.Col
+            {/* <RBS.Col
               md={3}
               style={{
                 border: '1px solid #e1e1e1',
@@ -68,12 +115,6 @@ export function SupplierProduct() {
                     height="150"
                     width="150"
                   />
-
-                  {/* <rect width="50%" height="100%" fill="" /> */}
-                  {/* <FontAwesomeIcon
-                    style={{ fontSize: '200px' }}
-                    icon={faShoppingBag}
-                  /> */}
                 </RBS.Col>
                 <RBS.Col md={12} xs={12} style={{ textAlign: 'center' }}>
                   <div
@@ -97,8 +138,8 @@ export function SupplierProduct() {
                   </div>
                 </RBS.Col>
               </RBS.Row>
-            </RBS.Col>
-            <RBS.Col md={8} style={{ marginLeft: '4%' }}>
+            </RBS.Col> */}
+            <RBS.Col md={12}>
               {/* <RBS.Card className="profile-card">
                 <div className="card">
                   <img
@@ -114,7 +155,7 @@ export function SupplierProduct() {
                   </p>
                 </div>
               </RBS.Card> */}
-              <RBS.Row>
+              {/* <RBS.Row>
                 <RBS.CardDeck>
                   {productDetails.map(data => getDetails(data))}
                 </RBS.CardDeck>
@@ -126,7 +167,11 @@ export function SupplierProduct() {
                 <RBS.CardDeck>
                   {productDetails.map(data => getDetails(data))}
                 </RBS.CardDeck>
-              </RBS.Row>
+                <br />
+                <RBS.CardDeck>
+                  {productDetails.map(data => getDetails(data))}
+                </RBS.CardDeck>
+              </RBS.Row> */}
             </RBS.Col>
           </RBS.Row>
         </RBS.Col>
@@ -137,8 +182,14 @@ export function SupplierProduct() {
 
 function getDetails(data) {
   return (
-    <RBS.Card md={3}>
-      <RBS.Card.Img variant="top" src={data.ImagePath} />
+    <RBS.Card md={3} style={{ height: '300px' }}>
+      <div style={{ padding: '1% 10% 0px 10%' }}>
+        <RBS.Card.Img
+          variant="top"
+          src={data.ImagePath}
+          style={{ height: '125px' }}
+        />
+      </div>
       <RBS.Card.Body>
         <RBS.Card.Title>{data.Name}</RBS.Card.Title>
         <RBS.Card.Text>

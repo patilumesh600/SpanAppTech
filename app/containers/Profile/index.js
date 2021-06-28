@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /**
  *
  * Profile
@@ -187,7 +188,7 @@ export function Profile() {
                     }
                     className="prof-tab"
                   >
-                    <RBS.Col md={12}>
+                    <RBS.Col md={12} style={{ padding: '0px' }}>
                       <OrderHistory />
                     </RBS.Col>
                   </RBS.Tab>
@@ -448,107 +449,245 @@ export function Profile() {
           padding: '0px',
         }}
       >
-        <div
-          style={{
-            padding: '0px',
-          }}
-        >
-          <RBS.Row
-            style={{
-              padding: '1%',
-              border: '1px solid #d3d3d3',
-              borderRadius: '5px',
-            }}
-          >
-            <RBS.Col xs={12} md={2}>
-              <img
-                className="_396cs4 _3exPp9"
-                width="100%"
-                height="100px"
-                alt=""
-                src="https://venustradersonline.com/5541-home_default/expressions-note-bk-a-4-400-pages-02001043.jpg"
-              />
-            </RBS.Col>
-            <RBS.Col xs={12} md={5}>
-              <div>
-                <h6> Classmate Note Book</h6>
-              </div>
-              <div>color : Platinum Grey</div>
-              <div>Seller : Classmate</div>
-            </RBS.Col>
-            <RBS.Col xs={12} md={2}>
-              Rs. 170
-            </RBS.Col>
-            <RBS.Col xs={12} md={3}>
-              <span className="AO0UbU">Delivered on 30 Apr 2021</span>
-            </RBS.Col>
-          </RBS.Row>
-          <RBS.Row
-            style={{
-              padding: '1%',
-              border: '1px solid #d3d3d3',
-              borderRadius: '5px',
-              marginTop: '1%',
-            }}
-          >
-            <RBS.Col xs={12} md={2}>
-              <img
-                className="_396cs4 _3exPp9"
-                width="100%"
-                height="100px"
-                alt=""
-                src="https://rukminim1.flixcart.com/image/416/416/book/4/9/2/stationery-original-imadwgbefchsge9s.jpeg?q=70"
-              />
-            </RBS.Col>
-            <RBS.Col xs={12} md={5}>
-              <div>
-                <h6>
-                  {' '}
-                  Stationery (English, Paperback, Dreamland Publications)
-                </h6>
-              </div>
-              <div>Language : English</div>
-              <div>Publisher : Dreamland</div>
-            </RBS.Col>
-            <RBS.Col xs={12} md={2}>
-              Rs. 780
-            </RBS.Col>
-            <RBS.Col xs={12} md={3}>
-              <span className="AO0UbU">Delivered on 25 Jan 2021</span>
-            </RBS.Col>
-          </RBS.Row>
-          <RBS.Row
-            style={{
-              padding: '1%',
-              border: '1px solid #d3d3d3',
-              borderRadius: '5px',
-              marginTop: '1%',
-            }}
-          >
-            <RBS.Col xs={12} md={2}>
-              <img
-                className="_396cs4 _3exPp9"
-                width="100%"
-                height="100px"
-                alt=""
-                src="https://venustradersonline.com/3835-thumb_product/staedtler-luna-48-colour-pencil-box-137c-48.jpg"
-              />
-            </RBS.Col>
-            <RBS.Col xs={12} md={5}>
-              <div>
-                <h6>STAEDTLER LUNA 48 COLOUR PENCIL BOX 137C-48</h6>
-              </div>
-              <div>Contains 48 colour pencils</div>
-              <div>Break resistant lead</div>
-            </RBS.Col>
-            <RBS.Col xs={12} md={2}>
-              Rs. 1,825
-            </RBS.Col>
-            <RBS.Col xs={12} md={3}>
-              <span className="AO0UbU">Delivered on 18 Dec 2020</span>
-            </RBS.Col>
-          </RBS.Row>
-        </div>
+        <RBS.Accordion defaultActiveKey="0">
+          {/* defaultActiveKey="0" */}
+          <RBS.Card>
+            <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="0">
+              <RBS.Row>
+                <RBS.Col xs={12} md={6}>
+                  Order Number: <b>123</b>
+                </RBS.Col>
+                <RBS.Col xs={12} md={6} style={{ textAlign: 'right' }}>
+                  Delivered on 30 Apr 2021
+                </RBS.Col>
+              </RBS.Row>
+            </RBS.Accordion.Toggle>
+            <RBS.Accordion.Collapse eventKey="0">
+              <RBS.Card.Body>
+                <div
+                  style={{
+                    padding: '0px',
+                  }}
+                >
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://venustradersonline.com/5541-home_default/expressions-note-bk-a-4-400-pages-02001043.jpg"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6> Classmate Note Book</h6>
+                      </div>
+                      <div>color : Platinum Grey</div>
+                      <div>Seller : Classmate</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 170
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 30 Apr 2021</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                      marginTop: '1%',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://rukminim1.flixcart.com/image/416/416/book/4/9/2/stationery-original-imadwgbefchsge9s.jpeg?q=70"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6>
+                          {' '}
+                          Stationery (English, Paperback, Dreamland
+                          Publications)
+                        </h6>
+                      </div>
+                      <div>Language : English</div>
+                      <div>Publisher : Dreamland</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 780
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 25 Jan 2021</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                      marginTop: '1%',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://venustradersonline.com/3835-thumb_product/staedtler-luna-48-colour-pencil-box-137c-48.jpg"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6>STAEDTLER LUNA 48 COLOUR PENCIL BOX 137C-48</h6>
+                      </div>
+                      <div>Contains 48 colour pencils</div>
+                      <div>Break resistant lead</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 1,825
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 18 Dec 2020</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                </div>
+              </RBS.Card.Body>
+            </RBS.Accordion.Collapse>
+          </RBS.Card>
+          <RBS.Card>
+            <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey="1">
+              <RBS.Row>
+                <RBS.Col xs={12} md={6}>
+                  Order Number: <b>456</b>
+                </RBS.Col>
+                <RBS.Col xs={12} md={6} style={{ textAlign: 'right' }}>
+                  Delivered on 15 May 2021
+                </RBS.Col>
+              </RBS.Row>
+            </RBS.Accordion.Toggle>
+            <RBS.Accordion.Collapse eventKey="1">
+              <RBS.Card.Body>
+                <div
+                  style={{
+                    padding: '0px',
+                  }}
+                >
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                      marginTop: '1%',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://venustradersonline.com/3835-thumb_product/staedtler-luna-48-colour-pencil-box-137c-48.jpg"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6>STAEDTLER LUNA 48 COLOUR PENCIL BOX 137C-48</h6>
+                      </div>
+                      <div>Contains 48 colour pencils</div>
+                      <div>Break resistant lead</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 1,825
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 15 May 2021</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://venustradersonline.com/5541-home_default/expressions-note-bk-a-4-400-pages-02001043.jpg"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6> Classmate Note Book</h6>
+                      </div>
+                      <div>color : Platinum Grey</div>
+                      <div>Seller : Classmate</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 170
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 15 May 2021</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                  <RBS.Row
+                    style={{
+                      padding: '1%',
+                      border: '1px solid #d3d3d3',
+                      borderRadius: '5px',
+                      marginTop: '1%',
+                    }}
+                  >
+                    <RBS.Col xs={12} md={2}>
+                      <img
+                        className="_396cs4 _3exPp9"
+                        width="100%"
+                        height="100px"
+                        alt=""
+                        src="https://rukminim1.flixcart.com/image/416/416/book/4/9/2/stationery-original-imadwgbefchsge9s.jpeg?q=70"
+                      />
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={5}>
+                      <div>
+                        <h6>
+                          {' '}
+                          Stationery (English, Paperback, Dreamland
+                          Publications)
+                        </h6>
+                      </div>
+                      <div>Language : English</div>
+                      <div>Publisher : Dreamland</div>
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={2}>
+                      Rs. 780
+                    </RBS.Col>
+                    <RBS.Col xs={12} md={3}>
+                      <span className="AO0UbU">Delivered on 15 May 2021</span>
+                    </RBS.Col>
+                  </RBS.Row>
+                </div>
+              </RBS.Card.Body>
+            </RBS.Accordion.Collapse>
+          </RBS.Card>
+        </RBS.Accordion>
       </div>
     );
   }
