@@ -2,6 +2,8 @@
 /**
  *
  * SupplierProduct
+ * *https://www.eggradients.com/
+ * *https://www.colorhexa.com/4f9fcf
  *
  */
 
@@ -52,11 +54,16 @@ export function SupplierProduct() {
       <RBS.Row>
         <RBS.Col>
           <RBS.Row
-            style={{ background: '#4f9fcf', color: '#FFF', padding: '0.2%' }}
+            style={{
+              background: '#232F3E',
+              color: '#FFF',
+              padding: '10px',
+            }}
           >
-            <RBS.Col xs={12} md={2}>
+            <RBS.Col xs={12} md={2} style={{ textAlign: 'center' }}>
               <RBS.Image
-                src={personaldetails.ImageURL1}
+                // src={personaldetails.ImageURL1}
+                src="https://media.zigcdn.com/media/user/2021/Mar/sanchetirohit120215274940.jpg"
                 roundedCircle
                 height="100"
                 width="100"

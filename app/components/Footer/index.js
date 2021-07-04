@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-script-url */
 import React from 'react';
 // import { FormattedMessage } from 'react-intl';
 // import A from 'components/A';
@@ -49,7 +51,7 @@ function Footer() {
   return (
     <RBS.Container
       style={{
-        background: '#4f9fcf',
+        background: '#000',
         color: '#FFF',
         padding: '15px',
         marginTop: '1%',
