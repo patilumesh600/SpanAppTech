@@ -11,7 +11,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import * as RBS from 'react-bootstrap';
@@ -21,45 +20,42 @@ import {
   faCartPlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import CarouselNew from 'react-multi-carousel';
+// import CarouselNew from 'react-multi-carousel';
+import banImg1 from 'images/cartridge.jpg';
+import ProgressBar from 'react-customizable-progressbar';
 import makeSelectViewDetails from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-
 import 'react-multi-carousel/lib/styles.css';
-
 import './details.css';
-
-import banImg1 from 'images/cartridge.jpg';
 import productDetail from '../../json/productDetail.json';
-import ProgressBar from 'react-customizable-progressbar';
 
 export function ViewDetails() {
   useInjectReducer({ key: 'viewDetails', reducer });
   useInjectSaga({ key: 'viewDetails', saga });
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
+  // const responsive = {
+  //   superLargeDesktop: {
+  //     // the naming can be any, depends on you.
+  //     breakpoint: { max: 4000, min: 3000 },
+  //     items: 5,
+  //   },
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 4,
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2,
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 464, min: 0 },
+  //     items: 1,
+  //   },
+  // };
 
   return (
-    <RBS.Row>
+    <RBS.Row id="divProductList">
       <RBS.Col
         md={{ span: 10, offset: 1 }}
         style={{
@@ -190,7 +186,7 @@ export function ViewDetails() {
                 }}
               /> */}
               <RBS.Col md={4}>
-                <img style={{ width: '100%' }} src={banImg1} />
+                <img style={{ width: '100%' }} src={banImg1} alt="" />
               </RBS.Col>
 
               <RBS.Col md={8}>
@@ -461,68 +457,68 @@ function bindCaourselImages(data) {
     </RBS.Carousel.Item>
   );
 }
-function bindAllFeatures(data) {
-  return (
-    <RBS.Card>
-      <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey={data.ID}>
-        <div className="specs-list-item__title" data-componentid="4">
-          <img
-            src={data.ICONURL}
-            width="30"
-            height="28"
-            className="inline-block margin-right10"
-            alt={data.Name}
-            title={data.Name}
-          />
-          <span className="inline-block">{data.Name}</span>
-        </div>
-      </RBS.Accordion.Toggle>
-      <RBS.Accordion.Collapse eventKey={data.ID}>
-        <RBS.Card.Body>
-          <RBS.Row>
-            {data.SubSpeicification.map(data1 => bindSubSpeicification(data1))}
-          </RBS.Row>
-        </RBS.Card.Body>
-      </RBS.Accordion.Collapse>
-    </RBS.Card>
-  );
-}
+// function bindAllFeatures(data) {
+//   return (
+//     <RBS.Card>
+//       <RBS.Accordion.Toggle as={RBS.Card.Header} eventKey={data.ID}>
+//         <div className="specs-list-item__title" data-componentid="4">
+//           <img
+//             src={data.ICONURL}
+//             width="30"
+//             height="28"
+//             className="inline-block margin-right10"
+//             alt={data.Name}
+//             title={data.Name}
+//           />
+//           <span className="inline-block">{data.Name}</span>
+//         </div>
+//       </RBS.Accordion.Toggle>
+//       <RBS.Accordion.Collapse eventKey={data.ID}>
+//         <RBS.Card.Body>
+//           <RBS.Row>
+//             {data.SubSpeicification.map(data1 => bindSubSpeicification(data1))}
+//           </RBS.Row>
+//         </RBS.Card.Body>
+//       </RBS.Accordion.Collapse>
+//     </RBS.Card>
+//   );
+// }
 
-function bindSubSpeicification(data) {
-  return (
-    <RBS.Col md={6} className="specs-content__item">
-      <RBS.Row>
-        <RBS.Col
-          md={6}
-          className="specs-features-item__content text-light-grey"
-        >
-          {data.Name}
-        </RBS.Col>
-        <RBS.Col md={6} className="specs-features-item__content text-bold">
-          {data.Value}
-        </RBS.Col>
-      </RBS.Row>
-    </RBS.Col>
-  );
-}
+// function bindSubSpeicification(data) {
+//   return (
+//     <RBS.Col md={6} className="specs-content__item">
+//       <RBS.Row>
+//         <RBS.Col
+//           md={6}
+//           className="specs-features-item__content text-light-grey"
+//         >
+//           {data.Name}
+//         </RBS.Col>
+//         <RBS.Col md={6} className="specs-features-item__content text-bold">
+//           {data.Value}
+//         </RBS.Col>
+//       </RBS.Row>
+//     </RBS.Col>
+//   );
+// }
 
-function bindBikeFeatures(data) {
-  return (
-    <RBS.Col md={4} className="specs-content__item">
-      <RBS.Row>
-        <RBS.Col
-          md={6}
-          className="specs-features-item__content text-light-grey"
-        >
-          {data.Name}
-        </RBS.Col>
-        <RBS.Col md={6} className="specs-features-item__content text-bold">
-          {data.Value}
-        </RBS.Col>
-      </RBS.Row>
-    </RBS.Col>
-  );
-}
+// function bindBikeFeatures(data) {
+//   return (
+//     <RBS.Col md={4} className="specs-content__item">
+//       <RBS.Row>
+//         <RBS.Col
+//           md={6}
+//           className="specs-features-item__content text-light-grey"
+//         >
+//           {data.Name}
+//         </RBS.Col>
+//         <RBS.Col md={6} className="specs-features-item__content text-bold">
+//           {data.Value}
+//         </RBS.Col>
+//       </RBS.Row>
+//     </RBS.Col>
+//   );
+// }
 
 function bindRatingSummary(data) {
   const percentage = (100 * data.Value) / 5;

@@ -14,6 +14,7 @@ import CarouselNew from 'react-multi-carousel';
 // https://www.npmjs.com/package/react-multi-carousel
 // https://react-multi-carousel.vercel.app/
 import 'react-multi-carousel/lib/styles.css';
+
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
@@ -170,7 +171,7 @@ export function DashboardNew() {
         <meta name="description" content="Description of DashboardNew" />
       </Helmet>
 
-      <div>
+      <div id="dashCarousel">
         <Carousel items={slider} groupBy={false} showDots showButton />
       </div>
       <div style={{ margin: '1%' }}>

@@ -13,7 +13,7 @@ import './filter.css';
 
 function Filters() {
   return (
-    <div style={{ paddingTop: '10%', color: '#8c8c8c' }}>
+    <div style={{ paddingTop: '12%', color: '#8c8c8c' }}>
       <h5>
         <FontAwesomeIcon icon={faFilter} /> Filters
       </h5>

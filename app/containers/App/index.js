@@ -29,7 +29,8 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
-import 'bootstrap/dist/css/bootstrap.min.css';''
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../styles/mobile.css';
 // import '../../styles/common.css';
 
 // const AppWrapper = styled.div`

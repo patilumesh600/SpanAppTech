@@ -59,11 +59,15 @@ export function Profile() {
             <RBS.Col
               md={2}
               style={{
-                border: '1px solid #e1e1e1',
+                // border: '1px solid #e1e1e1',
                 // background: ' RGB(212,230,217)',
-                background: '#4f9fcf',
-                color: '#FFF',
+                // background: '#4f9fcf',
+                // color: '#FFF',
                 // maxHeight: '300px',
+                color: '#FFF',
+                backgroundColor: '#20bf55',
+                backgroundImage:
+                  'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
               }}
             >
               <RBS.Row style={{ padding: '15px 0px', marginBottom: '5px' }}>

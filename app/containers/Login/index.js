@@ -1,3 +1,7 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-shadow */
+/* eslint-disable react/no-unused-prop-types */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /**
  *
@@ -9,8 +13,8 @@ import React, { useState, memo } from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/loginSignUp.css';
 import { connect } from 'react-redux';
-import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
+// import { Helmet } from 'react-helmet';
+// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose, bindActionCreators } from 'redux';
 

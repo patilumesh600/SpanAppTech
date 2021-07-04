@@ -55,8 +55,12 @@ export function SupplierProduct() {
         <RBS.Col>
           <RBS.Row
             style={{
-              background: '#232F3E',
+              // background: '#232F3E',
+              // color: '#FFF',
               color: '#FFF',
+              backgroundColor: '#20bf55',
+              backgroundImage:
+                'linear-gradient(315deg, #20bf55 0%, #01baef 74%)',
               padding: '10px',
             }}
           >

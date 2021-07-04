@@ -1,0 +1,6 @@
+
+@media only screen and (max-width: 600px) {
+    #dashCarousel{margin-top: 14%;}
+    #divProductList,#divUserProfile{margin-top: 12% !important;}
+    #profile-tab-tabpane-orderhistory,#profile-tab-tabpane-referandearn,#profile-tab-tabpane-referandearn div{padding: 0px;}
+}

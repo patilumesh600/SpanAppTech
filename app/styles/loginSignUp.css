@@ -12,7 +12,7 @@
     background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+  */
 
     /* background-image: url('https://ak6.picdn.net/shutterstock/videos/1010296196/thumb/1.jpg'); */
-    background-image: url('https://image.freepik.com/free-photo/school-tools-with-calculator_1101-345.jpg?1');
+    /* background-image: url('https://image.freepik.com/free-photo/school-tools-with-calculator_1101-345.jpg?1'); */
     background-size: cover;
   }
   
@@ -83,4 +83,9 @@
   .btnlogin{
     background-color: #4f9fcf;
     color: #FFF;
+  }
+  @media only screen and (max-width: 600px) {
+    .form{
+      width: 80%;
+    }
   }
